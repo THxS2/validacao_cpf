@@ -13,3 +13,16 @@ function validarCPF(cpf) {
     if (resto !== parseInt(cpf[10])) return false;
     return true;
 }
+
+document.getElementById('cpfForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const cpf = document.getElementById('cpf').value;
+    const resultado = document.getElementById('resultado');
+    if (validarCPF(cpf)) {
+        resultado.textContent = 'CPF válido!';
+        resultado.style.color = 'green';
+    } else {
+        resultado.textContent = 'CPF inválido!';
+        resultado.style.color = 'red';
+    }
+});
