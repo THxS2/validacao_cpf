@@ -49,3 +49,10 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+#resultado {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+    min-height: 24px;
+}
